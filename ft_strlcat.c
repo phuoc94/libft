@@ -6,11 +6,11 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 16:47:15 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/28 17:09:13 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int ft_strlcat(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
 {
 	unsigned int	i;
 	int				dest_len;

@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 15:49:03 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 07:16:09 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,6 @@
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+int		ft_isalnum(int c);
 
 #endif
