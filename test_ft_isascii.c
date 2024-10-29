@@ -1,18 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   test_ft_isascii.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 15:57:32 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 07:41:19 by phuocngu         ###   ########.fr       */
+/*   Created: 2024/10/28 12:31:15 by phuocngu          #+#    #+#             */
+/*   Updated: 2024/10/29 07:43:52 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isascii(int c)
+#include <stdio.h>
+#include <ctype.h>
+
+int	ft_isascii(int c);
+
+int	main(void)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
+	printf("127 = %d = %d\n", ft_isascii(127), isascii(127));
+	printf("0 = %d = %d\n", ft_isascii(0), isascii(0));
 	return (0);
 }
