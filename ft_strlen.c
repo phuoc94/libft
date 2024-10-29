@@ -6,19 +6,18 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:26:07 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 16:32:35 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 08:13:33 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(const char *str)
-{
-	int	len;
+#include "libft.h"
 
-	len = 0;
-	while (*str != '\0')
-	{
-		str++;
-		len++;
-	}
-	return (len);
+size_t	ft_strlen(const char *s)
+{
+	size_t	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
 }

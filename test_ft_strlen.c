@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   test_ft_strlen.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 08:15:15 by phuocngu         ###   ########.fr       */
+/*   Created: 2024/10/29 08:10:36 by phuocngu          #+#    #+#             */
+/*   Updated: 2024/10/29 08:13:24 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
 
-int		ft_isalpha(int c);
-int		ft_isdigit(int c);
-int		ft_isalnum(int c);
-int		ft_isascii(int c);
-int		ft_isprint(int c);
-int		ft_toupper(int c);
-int		ft_tolower(int c);
-typedef unsigned long size_t;
+#include <stdio.h>
+#include <string.h>
+#include "libft.h"
+
 size_t	ft_strlen(const char *s);
-#endif
+
+int	main(void)
+{
+	char	*str;
+
+	str = "Hello, World!";
+	printf("Hello, World! = %lu = %lu\n", ft_strlen(str), strlen(str));
+	str = "";
+	printf(" = %lu = %lu\n", ft_strlen(str), strlen(str));
+	str = "Hello, World!\0";
+	printf("Hello, World!\\0 = %lu = %lu\n", ft_strlen(str), strlen(str));
+	return (0);
+}
