@@ -1,18 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   test_ft_bzero.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/28 16:36:13 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 10:03:31 by phuocngu         ###   ########.fr       */
+/*   Created: 2024/10/29 09:31:09 by phuocngu          #+#    #+#             */
+/*   Updated: 2024/10/29 10:14:07 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <string.h>
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+int	main ()
 {
-	ft_memset(s, 0, n);
+	char str[50];
+
+	strcpy(str, "Hello, World!");
+	ft_bzero(str, 5);
+	puts(str);
+
+	return(0);
 }
