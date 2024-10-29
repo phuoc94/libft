@@ -6,14 +6,14 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 10:06:07 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:43:05 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-typedef unsigned long size_t;
+# include <string.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);

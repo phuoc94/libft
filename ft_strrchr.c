@@ -6,7 +6,8 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:38 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 16:45:09 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:32:27 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+char	*ft_strrchr(const char *s, int c);

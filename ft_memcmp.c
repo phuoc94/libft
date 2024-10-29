@@ -6,7 +6,10 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:20 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 16:37:29 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:33:51 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+int	ft_memcmp(const void *s1, const void *s2, size_t n);

@@ -6,7 +6,10 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:30 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 16:37:24 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:38:06 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);

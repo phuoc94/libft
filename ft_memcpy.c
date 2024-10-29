@@ -6,7 +6,10 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:22 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 16:37:29 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:34:47 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n);
