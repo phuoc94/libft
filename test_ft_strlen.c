@@ -6,10 +6,9 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/29 08:10:36 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 08:13:24 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/29 10:26:25 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include <stdio.h>
 #include <string.h>
