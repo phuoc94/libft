@@ -6,22 +6,28 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/28 17:09:13 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/30 11:07:29 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	int				dest_len;
+#include "libft.h"
 
-	dest_len = ft_strlen(dest);
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
+{
+	size_t	dst_len;
+	size_t	src_len;
+	size_t	i;
+
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	if (size <= dst_len)
+		return (src_len + size);
 	i = 0;
-	while (src[i] != '\0' && i < size)
+	while ((src[i] != '\0') && ((dst_len + i) < (size - 1)))
 	{
-		dest[dest_len + i] = src[i];
+		dst[dst_len + i] = src[i];
 		i++;
 	}
-	dest[dest_len + i] = '\0';
-	return (dest);
+	dst[dst_len + i] = '\0';
+	return (dst_len + src_len);
 }
