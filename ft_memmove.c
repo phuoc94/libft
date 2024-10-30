@@ -6,10 +6,30 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:23 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 10:35:52 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:02:12 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	unsigned char		*ptrdest;
+	const unsigned char	*ptrsrc;
+	int					i;
+
+	ptrdest = (unsigned char *)dest;
+	ptrsrc = (const unsigned char *)src;
+	if (ptrdest < ptrsrc)
+		ft_memcpy(dest, src, n);
+	else
+	{
+		i = n - 1;
+		while (i >= 0)
+		{
+			ptrdest[i] = ptrsrc[i];
+			i--;
+		}
+	}
+	return (dest);
+}
