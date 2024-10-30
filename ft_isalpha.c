@@ -6,14 +6,12 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:22:39 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 07:33:15 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/30 09:50:07 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z')
-		|| (c >= 'A' && c <= 'Z'))
-		return (1);
-	return (0);
+	return ((c >= 'a' && c <= 'z')
+		|| (c >= 'A' && c <= 'Z'));
 }
