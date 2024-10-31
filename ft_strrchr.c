@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:38 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/30 16:22:02 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/31 06:24:30 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	len;
 
 	len = ft_strlen(s);
+	if ((char)c == '\0')
+		return ((char *)(s + len));
 	while (len > 0)
 	{
-		if (s[len] == c)
-			return ((char *)&s[len]);
 		len--;
+		if (s[len] == (char)c)
+			return ((char *)&s[len]);
 	}
 	return (NULL);
 }
