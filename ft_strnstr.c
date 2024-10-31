@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:35 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/31 08:25:02 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/10/31 11:28:28 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,22 +15,16 @@
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
-	size_t	j;
 	size_t	little_len;
 
 	i = 0;
 	little_len = ft_strlen(little);
-	while (big[i] && (i < len))
+	while (big[i] && (i + little_len <= len))
 	{
-		j = 0;
-		if (big[i] != little[j])
+		if (big[i] == little[0])
 		{
-			i++;
-			j++;
-		}
-		if (strncmp(&big[i], little, little_len) == 0)
-		{
-			return ((char *)&big[i]);
+			if (ft_strncmp(&big[i], little, little_len) == 0)
+				return ((char *)&big[i]);
 		}
 		i++;
 	}
