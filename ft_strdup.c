@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 09:49:00 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/31 09:52:07 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/01 15:25:33 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,9 @@ char	*ft_strdup(const char *s)
 	size_t	i;
 
 	strlen = ft_strlen(s);
-	ptr = calloc(sizeof(char), strlen);
+	ptr = malloc(strlen + 1 * sizeof(char));
 	if (ptr == NULL)
-	{
 		return (NULL);
-	}
 	i = 0;
 	while (i <= strlen)
 	{
