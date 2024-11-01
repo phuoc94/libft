@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:35 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/31 11:28:28 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/01 18:08:44 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	little_len = ft_strlen(little);
+	if (little_len <= 0)
+		return ((char *)big);
 	while (big[i] && (i + little_len <= len))
 	{
 		if (big[i] == little[0])
