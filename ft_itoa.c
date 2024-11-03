@@ -6,26 +6,24 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:59:02 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/02 13:47:07 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/03 21:26:08 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 
-size_t	ft_intlen(int n)
+static size_t	ft_intlen(int n)
 {
-	int		temp;
-	int		sign;
 	size_t	len;
+	long	temp;
 
 	len = 0;
 	temp = n;
-	if (n < 0)
+	if (temp <= 0)
 	{
-		sign = 1;
+		len = 1;
 		temp = -temp;
-		len++;
 	}
 	while (temp > 0)
 	{
@@ -35,51 +33,28 @@ size_t	ft_intlen(int n)
 	return (len);
 }
 
-char	*isedgecase(int n)
-{
-	char	*result;
-
-	if (n == -2147483648)
-	{
-		result = "-2147483648";
-		return (result);
-	}
-	else if (n == 0)
-	{
-		result = "0";
-		return (result);
-	}
-	else
-	{
-		return (NULL);
-	}
-}
-
 char	*ft_itoa(int n)
 {
-	char	*result;
-	char	*edgecase;
-	size_t	len;
-	long	temp;
+	size_t len;
+	char *str;
+	long temp;
 
-	temp = n;
-	if (n < 0)
-		temp = -temp;
 	len = ft_intlen(n);
-	result = malloc((len + 1) * sizeof(char));
-	if (!result)
+	str = malloc((len + 1) * sizeof(char));
+	if (!str)
 		return (NULL);
-	edgecase = isedgecase(n);
-	if (edgecase)
-		return (edgecase);
-	result[len] = '\0';
-	while (len > 0)
+	str[len] = '\0';
+	temp = n;
+	if (temp < 0)
+		temp = -temp;
+	if (temp == 0)
+		str[0] = '0';
+	while (temp > 0)
 	{
-		result[len - 1] = (temp % 10) + '0';
-		temp = temp / 10;
-		len--;
+		str[--len] = (temp % 10) + '0';
+		temp /= 10;
 	}
 	if (n < 0)
-		result[len] = '-';
-	return (result);
+		str[0] = '-';
+	return (str);
 }
