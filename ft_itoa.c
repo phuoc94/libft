@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:59:02 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/03 21:26:08 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/04 10:10:10 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,9 @@ static size_t	ft_intlen(int n)
 
 char	*ft_itoa(int n)
 {
-	size_t len;
-	char *str;
-	long temp;
+	size_t	len;
+	char	*str;
+	long	temp;
 
 	len = ft_intlen(n);
 	str = malloc((len + 1) * sizeof(char));
