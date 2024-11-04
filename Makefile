@@ -6,7 +6,7 @@
 #    By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:52:44 by phuocngu          #+#    #+#              #
-#    Updated: 2024/11/04 12:31:41 by phuocngu         ###   ########.fr        #
+#    Updated: 2024/11/04 12:50:36 by phuocngu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ ft_bzero.c ft_memcpy.c ft_memmove.c ft_strlcpy.c ft_strlcat.c ft_toupper.c ft_to
 ft_strrchr.c ft_strncmp.c ft_memchr.c ft_memcmp.c ft_strnstr.c ft_atoi.c ft_calloc.c ft_strdup.c \
 ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c ft_strmapi.c ft_striteri.c \
 ft_putchar_fd.c ft_putendl_fd.c ft_putstr_fd.c  ft_putnbr_fd.c \
-ft_lstnew.c ft_lstadd_front.c ft_lstsize.c
+ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c
 
 SRC_PATH = $(SRC_FILES)
 

@@ -6,13 +6,13 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:06:58 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/03 19:08:07 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/04 13:25:06 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 
-#include "libft.h"
-#include "tests/test_ft_isalnum.c"
+#include "../libft.h"
+#include "test_ft_isalnum.c"
 
 int main() {
     test_ft_isalnum();
