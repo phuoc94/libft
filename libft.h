@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/04 12:18:51 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/04 12:26:18 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,5 +61,6 @@ void			ft_putstr_fd(char *s, int fd);
 void			ft_putnbr_fd(int n, int fd);
 
 t_list *ft_lstnew(void *content);
+void ft_lstadd_front(t_list **lst, t_list *new);
 
 #endif
