@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:59:02 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/04 10:10:10 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/04 15:16:49 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,9 +47,7 @@ char	*ft_itoa(int n)
 	temp = n;
 	if (temp < 0)
 		temp = -temp;
-	if (temp == 0)
-		str[0] = '0';
-	while (temp > 0)
+	while (len > 0)
 	{
 		str[--len] = (temp % 10) + '0';
 		temp /= 10;
