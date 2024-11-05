@@ -6,16 +6,14 @@
 #    By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:52:44 by phuocngu          #+#    #+#              #
-#    Updated: 2024/11/05 17:25:44 by phuocngu         ###   ########.fr        #
+#    Updated: 2024/11/05 17:58:05 by phuocngu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-
 CFLAGS += -Wall -Wextra -Werror
 
 SRC_DIR =
-
 INC_DIR =
 
 SRC_FILES = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen.c ft_memset.c \
@@ -30,9 +28,7 @@ SRC_PATH = $(SRC_FILES)
 BONUS_PATH = $(BONUS_FILES)
 
 SRC_HEADERS = libft.h
-
 OBJS = $(SRC_PATH:.c=.o)
-
 BONUS_OBJS = $(BONUS_PATH:.c=.o)
 
 HEADERS = $(addprefix $(INC_DIR)/, $(SRC_HEADERS))

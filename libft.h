@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/05 16:17:29 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:54:22 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,12 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
-# include "libft_bonus.h"
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
 
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
