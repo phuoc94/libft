@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:21:30 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/05 15:53:23 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:57:23 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,9 +92,9 @@ char	**ft_split(char const *s, char c)
 
 	strslen = count_words(s, c);
 	strs = malloc((strslen + 1) * (sizeof(char *)));
-	strs[strslen] = 0;
 	if (!strs)
 		return (NULL);
+	strs[strslen] = 0;
 	if (!(split(strs, s, c, strslen)))
 		return (NULL);
 	return (strs);
