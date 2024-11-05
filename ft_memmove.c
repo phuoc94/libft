@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:23 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/30 15:02:12 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:41:27 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	const unsigned char	*ptrsrc;
 	int					i;
 
+	if (!dest && !src)
+		return (NULL);
 	ptrdest = (unsigned char *)dest;
 	ptrsrc = (const unsigned char *)src;
 	if (ptrdest < ptrsrc)

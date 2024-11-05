@@ -6,11 +6,11 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 12:33:40 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/30 15:03:10 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/05 17:34:59 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 #include <stdio.h>
 
 int	main(void)
@@ -28,8 +28,8 @@ int	main(void)
 	src2 = strchr(dest2, 'e');
 	src3 = strchr(dest3, 'e');
 	src4 = strchr(dest4, 'e');
-	memmove(dest1, src1, 3);
-	ft_memmove(dest2, src2, 3);
+	memmove(((void *)0), ((void *)0), 5);
+	ft_memmove(((void *)0), ((void *)0), 5);
 	memmove(src3, dest3, 3);
 	ft_memmove(src4, dest4, 3);
 	printf("%s == %s\n", dest1, dest2);
