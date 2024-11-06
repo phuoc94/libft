@@ -6,21 +6,24 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:31:15 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 07:51:23 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:56:42 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libtest.h"
 
-int	ft_isprint(int c);
-
-int	main(void)
+void	test_ft_isprint(void)
 {
-	printf("0 = %d = %d\n", ft_isprint(0), isprint(0));
-	printf("31 = %d = %d\n", ft_isprint(31), isprint(31));
-	printf("32 = %d = %d\n", ft_isprint(32), isprint(32));
-	printf("126 = %d = %d\n", ft_isprint(126), isprint(126));
-	printf("127 = %d = %d\n", ft_isprint(127), isprint(127));
-	return (0);
+	int	i;
+	int	num_tests;
+	int	test_chars[] = {'a', 'Z', '5', '!', ' ', '\n', '\0', '0', '9', 'm', 'M',
+			0, 127, -1, 256};
+
+	num_tests = sizeof(test_chars) / sizeof(test_chars[0]);
+	i = 0;
+	while (i < num_tests)
+	{
+		ASSERT_EQUAL(isprint(test_chars[i]), ft_isprint(test_chars[i]));
+		i++;
+	}
 }

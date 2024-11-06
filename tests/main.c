@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/03 19:06:58 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:55:14 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:57:14 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,8 @@ int	main(void)
     test_ft_isascii();
 	printf("\nTest ft_isdigit\n");
 	test_ft_isdigit();
+	printf("\nTest ft_isprint\n");
+	test_ft_isprint();
 	printf("\nTest ft_strrchr\n");
 	test_ft_strrchr();
 	printf("\n\nDone.\n");
