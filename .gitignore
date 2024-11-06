@@ -1,5 +1,5 @@
-.vscode/settings.json
-a.out
-libft.a
+*.out
 *.o
-.vscode/tasks.json
+*.a
+.vscode/
+tests/test_result
