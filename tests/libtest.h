@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   libtest.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/03 19:06:58 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:08:09 by phuocngu         ###   ########.fr       */
+/*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
+/*   Updated: 2024/11/06 21:26:24 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libtest.h"
+#ifndef LIBTEST_H
+# define LIBTEST_H
 
-int	main(void)
-{
-	printf("Running tests...\n ");
-	printf("\nTest ft_isalnum\n");
-	test_ft_isalnum();
-	printf("\n\nTest ft_strrchr\n");
-	test_ft_strrchr();
-	printf("\n\nDone.\n");
-	return (0);
-}
+# include "../libft.h"
+# include "assertions.h"
+# include <ctype.h>
+# include <limits.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unistd.h>
+
+void	test_ft_isalnum(void);
+void	test_ft_strrchr(void);
+
+#endif
