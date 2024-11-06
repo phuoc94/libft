@@ -6,17 +6,24 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:31:15 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 07:19:16 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:54:51 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libtest.h"
 
-int	ft_isdigit(int c);
-
-int	main(void)
+void	test_ft_isdigit(void)
 {
-	printf("x = %d\n", ft_isdigit('x'));
-	printf("1 = %d\n", ft_isdigit('1'));
-	return (0);
+	int	i;
+	int	num_tests;
+	int	test_chars[] = {'a', 'Z', '5', '!', ' ', '\n', '\0', '0', '9', 'm', 'M',
+			0, 127, -1, 256};
+
+	num_tests = sizeof(test_chars) / sizeof(test_chars[0]);
+	i = 0;
+	while (i < num_tests)
+	{
+		ASSERT_EQUAL(isdigit(test_chars[i]), ft_isdigit(test_chars[i]));
+		i++;
+	}
 }
