@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:50:51 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 07:53:40 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 20:53:31 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *result;
-	t_list *new_node;
+	t_list	*result;
+	t_list	*new_node;
 
 	if (lst == NULL)
 		return (NULL);
