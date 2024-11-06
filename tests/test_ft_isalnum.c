@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:39:45 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:26:33 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:45:37 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,16 @@
 
 void	test_ft_isalnum(void)
 {
-	ASSERT_EQUAL(isalnum('a'), ft_isalnum('a'));
-	ASSERT_EQUAL(isalnum('Z'), ft_isalnum('Z'));
-	ASSERT_EQUAL(isalnum('5'), ft_isalnum('5'));
+	int	i;
+	int	num_tests;
+	int	test_chars[] = {'a', 'Z', '5', '!', ' ', '\n', '\0', '0', '9', 'm', 'M',
+			0, 127, -1, 256};
 
-	ASSERT_EQUAL(isalnum('!'), ft_isalnum('!'));
-	ASSERT_EQUAL(isalnum(' '), ft_isalnum(' '));
-	ASSERT_EQUAL(isalnum('\n'), ft_isalnum('\n'));
-	ASSERT_EQUAL(isalnum('\0'), ft_isalnum('\0'));
-
-	ASSERT_EQUAL(isalnum('0'), ft_isalnum('0'));
-	ASSERT_EQUAL(isalnum('9'), ft_isalnum('9'));
-	ASSERT_EQUAL(isalnum('m'), ft_isalnum('m'));
-	ASSERT_EQUAL(isalnum('M'), ft_isalnum('M'));
-
-	ASSERT_EQUAL(isalnum(0), ft_isalnum(0));
-	ASSERT_EQUAL(isalnum(127), ft_isalnum(127));
-	ASSERT_EQUAL(isalnum(-1), ft_isalnum(-1));
-	ASSERT_EQUAL(isalnum(256), ft_isalnum(256));
+	num_tests = sizeof(test_chars) / sizeof(test_chars[0]);
+	i = 0;
+	while (i < num_tests)
+	{
+		ASSERT_EQUAL(isalnum(test_chars[i]), ft_isalnum(test_chars[i]));
+		i++;
+	}
 }

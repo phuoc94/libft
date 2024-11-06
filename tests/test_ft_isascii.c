@@ -6,18 +6,24 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:31:15 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/10/29 07:43:52 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:53:40 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <ctype.h>
+#include "libtest.h"
 
-int	ft_isascii(int c);
-
-int	main(void)
+void	test_ft_isascii(void)
 {
-	printf("127 = %d = %d\n", ft_isascii(127), isascii(127));
-	printf("0 = %d = %d\n", ft_isascii(0), isascii(0));
-	return (0);
+	int	i;
+	int	num_tests;
+	int	test_chars[] = {'a', 'Z', '5', '!', ' ', '\n', '\0', '0', '9', 'm', 'M',
+			0, 127, -1, 256};
+
+	num_tests = sizeof(test_chars) / sizeof(test_chars[0]);
+	i = 0;
+	while (i < num_tests)
+	{
+		ASSERT_EQUAL(isascii(test_chars[i]), ft_isascii(test_chars[i]));
+		i++;
+	}
 }

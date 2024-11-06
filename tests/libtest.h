@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:26:24 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/06 21:47:46 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@
 # include <string.h>
 # include <unistd.h>
 
+void	test_ft_isalpha(void);
 void	test_ft_isalnum(void);
+void	test_ft_isascii(void);
 void	test_ft_strrchr(void);
 
 #endif
