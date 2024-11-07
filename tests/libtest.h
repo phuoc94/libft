@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/07 18:44:50 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/07 20:26:01 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ void	test_ft_isalnum(void);
 void	test_ft_isascii(void);
 void	test_ft_isdigit(void);
 void	test_ft_isprint(void);
+void	test_ft_tolower(void);
+void	test_ft_toupper(void);
 void	test_ft_strrchr(void);
 
 #endif
