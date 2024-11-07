@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 14:53:10 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/07 16:37:05 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:46:29 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@
 # include <stdio.h>
 
 void	assert_equal_int(int expected, int actual);
+void	assert_equal_ptr(void *expected, void *actual);
+
 void	test_ft_isalpha(void);
 void	test_ft_isalnum(void);
 void	test_ft_isascii(void);

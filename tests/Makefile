@@ -6,7 +6,7 @@
 #    By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:52:44 by phuocngu          #+#    #+#              #
-#    Updated: 2024/11/07 16:37:44 by phuocngu         ###   ########.fr        #
+#    Updated: 2024/11/07 16:49:59 by phuocngu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ ft_putchar_fd.c ft_putendl_fd.c ft_putstr_fd.c ft_putnbr_fd.c
 BONUS_FILES = ft_lstnew_bonus.c ft_lstadd_front_bonus.c ft_lstsize_bonus.c ft_lstlast_bonus.c \
 ft_lstadd_back_bonus.c ft_lstdelone_bonus.c ft_lstclear_bonus.c ft_lstiter_bonus.c ft_lstmap_bonus.c
 
-TEST_FILES = assert_equal_int.c test_ft_isalpha.c test_ft_isdigit.c test_ft_isalnum.c test_ft_isascii.c test_ft_isprint.c test_ft_strrchr.c
+TEST_FILES = assert_equal_int.c assert_equal_ptr.c test_ft_isalpha.c test_ft_isdigit.c \
+test_ft_isalnum.c test_ft_isascii.c test_ft_isprint.c test_ft_strrchr.c
 
 vpath %.c $(SRC_DIR)
 
