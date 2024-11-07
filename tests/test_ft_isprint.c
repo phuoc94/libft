@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:31:15 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:56:42 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:34:51 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void	test_ft_isprint(void)
 	i = 0;
 	while (i < num_tests)
 	{
-		ASSERT_EQUAL(isprint(test_chars[i]), ft_isprint(test_chars[i]));
+		int expected = isprint(test_chars[i]) ? 1 : 0;
+		int actual = ft_isprint(test_chars[i]);
+		assert_equal_int(expected,actual);
 		i++;
 	}
 }

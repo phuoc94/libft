@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 15:39:45 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:45:37 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:33:02 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void	test_ft_isalnum(void)
 	i = 0;
 	while (i < num_tests)
 	{
-		ASSERT_EQUAL(isalnum(test_chars[i]), ft_isalnum(test_chars[i]));
+		int expected = isalnum(test_chars[i]) ? 1 : 0;
+		int actual = ft_isalnum(test_chars[i]);
+		assert_equal_int(expected,actual);
 		i++;
 	}
 }

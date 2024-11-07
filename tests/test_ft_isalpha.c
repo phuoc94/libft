@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 12:31:15 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/06 21:45:36 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/07 16:33:43 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,9 @@ void	test_ft_isalpha(void)
 	i = 0;
 	while (i < num_tests)
 	{
-		ASSERT_EQUAL(isalpha(test_chars[i]), ft_isalpha(test_chars[i]));
+		int expected = isalpha(test_chars[i]) ? 1 : 0;
+		int actual = ft_isalpha(test_chars[i]);
+		assert_equal_int(expected,actual);
 		i++;
 	}
 }
