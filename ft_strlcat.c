@@ -6,30 +6,34 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/08 17:45:52 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:31:44 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static size_t	ft_minval(size_t a, size_t b)
+{
+	if (a < b)
+		return (a);
+	return (b);
+}
+
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;
 	size_t	src_len;
-	size_t	i;
 
-	if ((!dst && !src) || size == 0)
-		return (0);
-	dst_len = ft_strlen(dst);
+	dst_len = ft_minval(ft_strlen(dst), size);
 	src_len = ft_strlen(src);
-	if (size <= dst_len)
+	if (size == dst_len)
 		return (src_len + size);
-	i = 0;
-	while ((src[i] != '\0') && ((dst_len + i) < (size - 1)))
+	if (src_len < (size - dst_len))
+		ft_memcpy((&dst[dst_len]), src, (src_len + 1));
+	else
 	{
-		dst[dst_len + i] = src[i];
-		i++;
+		ft_memcpy((&dst[dst_len]), src, (size - dst_len - 1));
+		dst[size - 1] = '\0';
 	}
-	dst[dst_len + i] = '\0';
 	return (dst_len + src_len);
 }
