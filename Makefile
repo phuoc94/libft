@@ -6,7 +6,7 @@
 #    By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:52:44 by phuocngu          #+#    #+#              #
-#    Updated: 2024/11/08 12:10:08 by phuocngu         ###   ########.fr        #
+#    Updated: 2024/11/08 13:07:24 by phuocngu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,10 +43,10 @@ $(BONUS_NAME): $(OBJS) $(BONUS_OBJS)
 	touch $(BONUS_NAME)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
+	rm -f $(OBJS) $(BONUS_OBJS) $(BONUS_NAME)
 
 fclean: clean
-	rm -f $(NAME) $(BONUS_NAME)
+	rm -f $(NAME)
 
 re: fclean all
 
