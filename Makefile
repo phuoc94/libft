@@ -6,7 +6,7 @@
 #    By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:52:44 by phuocngu          #+#    #+#              #
-#    Updated: 2024/11/07 18:03:56 by phuocngu         ###   ########.fr        #
+#    Updated: 2024/11/08 12:10:08 by phuocngu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ OBJS = $(SRC_FILES:.c=.o)
 BONUS_OBJS = $(BONUS_FILES:.c=.o)
 
 NAME = libft.a
+BONUS_NAME = .libft_bonus
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
@@ -35,17 +36,17 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
-bonus: .bonus
+bonus: $(BONUS_NAME)
 
-.bonus: $(OBJS) $(BONUS_OBJS)
+$(BONUS_NAME): $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
-	touch .bonus
+	touch $(BONUS_NAME)
 
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS) .bonus
+	rm -f $(OBJS) $(BONUS_OBJS)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -f $(NAME) $(BONUS_NAME)
 
 re: fclean all
 
