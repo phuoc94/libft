@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/08 18:31:44 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/08 18:43:40 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 	size_t	dst_len;
 	size_t	src_len;
 
+	if (dst == NULL && size == 0)
+		return (0);
 	dst_len = ft_minval(ft_strlen(dst), size);
 	src_len = ft_strlen(src);
 	if (size == dst_len)
