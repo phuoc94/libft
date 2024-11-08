@@ -6,12 +6,11 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:21:30 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/05 18:57:23 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/08 15:29:54 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static size_t	count_words(const char *s, char c)
 {
@@ -59,7 +58,7 @@ static void	free_all(char **ptr, size_t n)
 	free(ptr);
 }
 
-int	split(char **strs, const char *s, char c, size_t n)
+static int	split(char **strs, const char *s, char c, size_t n)
 {
 	size_t	i;
 	size_t	current_word;
