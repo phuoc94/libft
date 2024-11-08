@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 08:30:53 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/07 19:55:33 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/08 16:49:57 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*ptr;
 
 	if (nmemb == 0 || size == 0)
-		return (NULL);
+		return (malloc(0));
 	total_size = nmemb * size;
 	if (total_size / size != nmemb)
 		return (NULL);
