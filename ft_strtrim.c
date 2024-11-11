@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:17:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/05 19:07:38 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:57:38 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	{
 		end--;
 	}
-	ptr = malloc(sizeof(char) * (end - start + 1));
+	ptr = malloc((end - start + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, &s1[start], end - start + 1);

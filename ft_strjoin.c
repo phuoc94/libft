@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:57:13 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/01 19:09:48 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/11 18:57:30 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
 	total_len = s1_len + s2_len;
-	ptr = malloc(sizeof(char) * total_len + 1);
+	ptr = malloc((total_len + 1) * sizeof(char));
 	if (!ptr)
 		return (NULL);
 	ft_strlcpy(ptr, s1, s1_len + 1);
