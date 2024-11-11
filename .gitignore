@@ -3,3 +3,4 @@
 *.a
 .vscode/
 tests/test_result
+.libft_bonus
