@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 18:50:51 by phuocngu          #+#    #+#             */
-/*   Updated: 2024/11/08 21:24:11 by phuocngu         ###   ########.fr       */
+/*   Updated: 2024/11/11 13:39:39 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*result;
 	t_list	*new_node;
+	t_list	*tmp;
 	void	*content;
 
 	result = NULL;
@@ -29,7 +30,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 			ft_lstclear(&result, del);
 			return (NULL);
 		}
-		ft_lstadd_back(&result, new_node);
+		if (!result)
+			result = new_node;
+		else
+			tmp->next = new_node;
+		tmp = new_node;
 		lst = lst->next;
 	}
 	return (result);
