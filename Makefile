@@ -6,7 +6,7 @@
 #    By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/29 12:52:44 by phuocngu          #+#    #+#              #
-#    Updated: 2025/01/05 08:16:32 by phuocngu         ###   ########.fr        #
+#    Updated: 2025/01/06 14:22:32 by phuocngu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,23 @@ SRC_FILES = \
 	output/ft_putendl_fd.c \
 	output/ft_putstr_fd.c \
 	output/ft_putnbr_fd.c
+
+GNL_DIR = get_next_line
+GNL_SRC_FILES = \
+	get_next_line.c \
+	get_next_line_utils.c \
+
+FT_PRINTF_DIR = ft_printf
+FT_PRINTF_SRC_FILES = \
+	ft_printf.c \
+	ft_print_ptr.c \
+	ft_print_char.c \
+	ft_print_str.c \
+	ft_print_nbr.c
+
+SRC_FILES += \
+	$(addprefix $(GNL_DIR)/, $(GNL_SRC_FILES)) \
+	$(addprefix $(FT_PRINTF_DIR)/, $(FT_PRINTF_SRC_FILES))
 
 OBJS = $(SRC_FILES:.c=.o)
 
