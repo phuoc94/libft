@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 17:21:30 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:56:09 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,18 @@ static int	split(char **strs, const char *s, char c, size_t n)
 	return (1);
 }
 
+/**
+ * ft_split - Splits a string into an array of strings based on a delimiter.
+ * @s: The input string to be split.
+ * @c: The delimiter character.
+ *
+ * This function takes a string `s` and splits it into an array of strings
+ * using the delimiter character `c`. The resulting array of strings is
+ * dynamically allocated and must be freed by the caller. The last element
+ * of the array is set to NULL to mark the end of the array.
+ *
+ * Return: A pointer to the array of strings, or NULL if memory allocation fails.
+ */
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;

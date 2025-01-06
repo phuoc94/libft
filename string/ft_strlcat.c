@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 16:36:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 15:15:44 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,24 @@ static size_t	ft_minval(size_t a, size_t b)
 	return (b);
 }
 
+/**
+ * @brief Concatenates the string `src` to the end of `dst` ensuring that the
+ *        total length of the concatenated string does not exceed `size` bytes
+ *        (including the null-terminator).
+ *
+ * @param dst The destination buffer to which the string `src` will be
+ *        concatenated.
+ * @param src The source string to be concatenated to `dst`.
+ * @param size The total size of the destination buffer `dst`.
+ *
+ * @return The total length of the string it tried to create, i.e., the initial
+ *         length of `dst` plus the length of `src`. If the return value is
+ *         greater than or equal to `size`, truncation occurred.
+ *
+ * @note If `dst` is NULL and `size` is 0, the function returns 0.
+ *       If `size` is less than or equal to the length of `dst`, the function
+ *       returns the length of `src` plus `size`.
+ */
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;

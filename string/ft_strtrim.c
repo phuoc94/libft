@@ -6,12 +6,23 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 12:17:29 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 15:00:54 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
+/**
+ * @brief Trims the characters from the beginning and end of a string.
+ *
+ * This function allocates (with malloc(3)) and returns a copy of the string 's1'
+ * with the characters specified in 'set' removed from the beginning and the end
+ * of the string.
+ *
+ * @param s1 The string to be trimmed.
+ * @param set The reference set of characters to trim.
+ * @return The trimmed string. NULL if the allocation fails.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*ptr;

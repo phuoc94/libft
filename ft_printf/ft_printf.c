@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 14:59:02 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/06 13:45:27 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:42:45 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,21 @@ int	handle_format(char c, va_list *args)
 		return (ft_print_char(c));
 }
 
+/**
+ * ft_printf - Custom implementation of the printf function.
+ * @str: The format string containing the text to be written to stdout.
+ *       It can optionally contain format specifiers that will be replaced
+ *       by the values specified in the additional arguments.
+ * @...: Additional arguments specifying the values to be printed according
+ *       to the format specifiers in the format string.
+ *
+ * This function processes the format string and prints the corresponding
+ * values to stdout. It supports a subset of the standard printf format
+ * specifiers. The function returns the total number of characters printed,
+ * or -1 if an error occurs.
+ *
+ * Return: The total number of characters printed, or -1 if an error occurs.
+ */
 int	ft_printf(const char *str, ...)
 {
 	int		i;

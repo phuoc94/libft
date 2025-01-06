@@ -6,12 +6,23 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/04 10:59:23 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:36:37 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
+/**
+ * @file ft_putnbr_fd.c
+ * @brief Outputs the integer n to the given file descriptor.
+ *
+ * This function takes an integer n and a file descriptor fd, and writes the
+ * integer to the file descriptor. It handles negative numbers and the minimum
+ * integer value correctly.
+ *
+ * @param n The integer to output.
+ * @param fd The file descriptor on which to write.
+ */
 void	ft_putnbr_fd(int n, int fd)
 {
 	int	div;

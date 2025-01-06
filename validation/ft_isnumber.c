@@ -6,12 +6,22 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 15:16:03 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 15:01:26 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
+/**
+ * @file ft_isnumber.c
+ * @brief Checks if a given string represents a valid number.
+ *
+ * This function checks if the input string `s` represents a valid number.
+ * A valid number can optionally start with a '+' or '-' sign followed by digits.
+ *
+ * @param s The input string to check.
+ * @return 1 if the string represents a valid number, 0 otherwise.
+ */
 int	ft_isnumber(char *s)
 {
 	int	i;

@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 16:46:51 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/06 13:45:38 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:55:41 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,6 +103,18 @@ char	*copy_list_to_line(t_list *list, char *next_line_head)
 	return (line);
 }
 
+/**
+ * get_next_line - Reads a line from a file descriptor.
+ * @fd: The file descriptor to read from.
+ *
+ * This function reads a line from the given file descriptor and returns it
+ * as a dynamically allocated string. It uses a static list to keep track of
+ * the file's state between calls, allowing it to handle multiple lines
+ * across multiple calls.
+ *
+ * Return: A pointer to the next line read from the file descriptor, or NULL
+ * if an error occurs or the end of the file is reached.
+ */
 char	*get_next_line(int fd)
 {
 	static t_list	*list = NULL;

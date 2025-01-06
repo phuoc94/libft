@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:59:02 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:34:40 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,18 @@ static size_t	ft_intlen(int n)
 	return (len);
 }
 
+/**
+ * @file ft_itoa.c
+ * @brief Converts an integer to a null-terminated string.
+ *
+ * This function takes an integer value and converts it to a string
+ * representation. The resulting string is dynamically allocated and
+ * must be freed by the caller.
+ *
+ * @param n The integer to be converted.
+ * @return A pointer to the null-terminated string representing the integer,
+ *         or NULL if memory allocation fails.
+ */
 char	*ft_itoa(int n)
 {
 	size_t	len;

@@ -6,7 +6,7 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/03 12:12:35 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 07:38:24 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:33:26 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,16 @@ static double	parse_fractional_part(const char *str)
 	return (fraction);
 }
 
+/**
+ * @brief Converts a string to a double.
+ *
+ * This function converts the initial portion of the string pointed to by str
+ * to a double representation. It handles optional leading whitespace, an
+ * optional sign, and both integer and fractional parts.
+ *
+ * @param str The string to be converted.
+ * @return The converted double value.
+ */
 double	ft_atof(const char *str)
 {
 	double	result;

@@ -6,12 +6,22 @@
 /*   By: phuocngu <phuocngu@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/31 10:57:13 by phuocngu          #+#    #+#             */
-/*   Updated: 2025/01/05 08:02:41 by phuocngu         ###   ########.fr       */
+/*   Updated: 2025/01/06 14:58:08 by phuocngu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
+/**
+ * @brief Joins two strings into a new string.
+ *
+ * This function allocates (with malloc(3)) and returns a new string,
+ * which is the result of the concatenation of 's1' and 's2'.
+ *
+ * @param s1 The prefix string.
+ * @param s2 The suffix string.
+ * @return The new string, or NULL if the allocation fails.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*ptr;
